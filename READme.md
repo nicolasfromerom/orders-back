@@ -30,3 +30,35 @@ Ejecuta el siguiente comando en PowerShell desde la raíz del proyecto para comp
 
 ```powershell
 .\start-app.ps1
+```
+
+### 2. Crear una orden
+
+Para crear una nueva orden, puedes enviar una solicitud `POST` al endpoint localhost:8080/api/orders. A continuación, se muestra un ejemplo del cuerpo de la solicitud en formato JSON:
+
+```json
+{
+    "customerId": 1,
+    "productId": 1,
+    "quantity": 1
+}
+```
+### 3. Editar una orden
+
+Para crear una nueva orden, puedes enviar una solicitud `PUT` al endpoint localhost:8080/api/orders/{id}. Reemplaza `{id}` con el ID de la orden que deseas editar. A continuación, se muestra un ejemplo del cuerpo de la solicitud en formato JSON:
+
+```json
+{
+    "customerId": 1,
+    "productId": 1,
+    "quantity": 2
+}
+``` 
+### 4. Consultar una orden
+Para consultar una orden específica, puedes enviar una solicitud `GET` al endpoint `localhost:8080/api/orders/{id}`. Reemplaza `{id}` con el ID de la orden que deseas consultar.
+
+### 5. Consultar todas las órdenes
+Para consultar todas las órdenes, puedes enviar una solicitud `GET` al endpoint `localhost:8080/api/orders`.
+
+### 6. Eliminar una orden
+Para eliminar una orden específica, puedes enviar una solicitud `DELETE` al endpoint `localhost:8080/api/orders/{id}`. Reemplaza `{id}` con el ID de la orden que deseas eliminar.
