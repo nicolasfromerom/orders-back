@@ -1,27 +1,18 @@
 package com.examen.pedidos.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
-
-@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table("customers")
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @NotBlank
-    private String nombre;
-
-    @NotBlank
+    private String name;
     private String email;
 }
