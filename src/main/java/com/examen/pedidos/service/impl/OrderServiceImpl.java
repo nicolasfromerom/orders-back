@@ -47,7 +47,7 @@ public class OrderServiceImpl implements OrderService {
                                 Order order = new Order();
                                 order.setCustomer(customer);
                                 order.setProduct(products.get(0));
-                                order.setTotalPrice(totalPrice);
+                                order.setTotalPrice(totalPrice * orderRequest.getQuantity());
                                 order.setQuantity(orderRequest.getQuantity());
 
                                 // Guardar el pedido
